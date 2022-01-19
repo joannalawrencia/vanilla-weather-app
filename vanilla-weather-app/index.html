@@ -10,31 +10,39 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-      <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Vanilla Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-      <h1>New York</h1>
-      <ul>
-        <li>Friday, 05:00</li>
-        <li>partly cloudy</li>
-      </ul>
-      <div class="row">
-        <div class="col-md-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="partly cloudy"
-          />
-          12°C | °F
-        </div>
-        <div class="col-6">
-          <ul>
-            <li>Percipitation: 0%</li>
-            <li>Humidity: 0%</li>
-            <li>Wind: 0%</li>
-          </ul>
+      <div class="app-wrap">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>New York</h1>
+            <ul>
+              <li>Friday, 05:00</li>
+              <li>partly cloudy</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temp">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="partly cloudy"
+                  class="float-left"
+                />
+                <div class="float-left">12°C | °F</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Percipitation: 0%</li>
+                <li>Humidity: 0%</li>
+                <li>Wind: 0%</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <small
           >Coded by Joanna Lawrencia. Open-sourced on
