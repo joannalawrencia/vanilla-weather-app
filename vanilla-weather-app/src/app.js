@@ -1,3 +1,18 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = ["Sunday", "Monday", "Tuesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+  return `${day}, ${hours}:${minutes}`;
+}
+
 function displayTemperature(response) {
   console.log(response.data.main);
   let temperatureElement = document.querySelector("#temperature");
@@ -15,6 +30,9 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let apiUrl = `api.openweathermap.org/data/2.5/weather?q=London&appid=d15392c799af218cfbddce487fe22d57&units=metric`;
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  let apiUrl = `api.openweathermap.org/data/2.5/weather?q=New York&appid=d15392c799af218cfbddce487fe22d57&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
