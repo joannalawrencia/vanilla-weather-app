@@ -42,29 +42,32 @@
           <div class="overview">
             <h1 id="city">New York</h1>
             <ul>
-              <li id="date">Friday, 05:00</li>
+              <li id="date"></li>
               <li id="description"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <div class="float-left">
-                  <strong id="temperature">12</strong>
-                  <span class="units">°C | <a href="#" id="#">°F</a></span>
-                </div>
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                   id="icon"
                   alt="partly cloudy"
                   class="float-left"
                 />
+                <div class="float-left">
+                  <strong id="temperature">12</strong>
+                  <span class="units">
+                    <a href="#" id="celsius-conversion" class="active">°C</a> | 
+                    <a href="#" id="fahrenheit-conversion" class="">°F</a>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
